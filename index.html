@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKUST KSA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/b9ab0c7216.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>alert("본 웹사이트의 모바일 버전은 아직 개발 중에 있습니다. \n꼭 노트북, PC로 이용해주세요! 감사합니다. \n홍콩과기대 한인회 임원진 올림");</script>
+    <div class="container" style="overflow:auto;">
+        <div class="header">
+            <h1><a href="index.html">HKUST KSA</a></h1>
+            
+            <input type = "checkbox" id = "menuicon">
+          
+                <label for = "menuicon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+           
+
+            
+            <div class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">About Us</a></li>
+                    <li><a href="activityclub.html">Activities/Clubs</a></li>
+                    <li><a href="guidance.html">Information Board</a></li>
+                    <li><a href="sponsorship.html">Sponsorships</a></li>
+                </ul>
+                <ul class="contacts">
+                    <a href="https://www.facebook.com/groups/ksa.hkust"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/hkustsu.ksa/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:su.ksa@connect.ust.hk"><i class="fa-solid fa-envelope"></i></a>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="welcome" id="welcome">
+            <h2>홍콩과기대 한인학생회에 오신 것을 환영합니다.</h2>
+            <p><br>
+                한인회(KSA)는 홍콩과기대 학생연합소속 공식 학생단체로 2011년에 출범해 <br>현재도 교내 한인 학우분들의
+                권익 증진과 한국 문화전파에 최선을 다하고 있습니다.
+            </p>
+            <p>
+                먼 타지에서의 유학생활이 보다 보람차도록 회원들 간 동호 활동 및 행사를 추진하며<br> 신입생과 복학생들의 
+                원활한 적응을 위해 안내 길잡이 역할 또한 맡고 있습니다.
+            </p>
+            <p>
+                유사시 회원들의 목소리를 대변하고 여건 보장에 힘을 보태는,<br> 적극적인 교류와 소통을 위한 기회의 장을 
+                마련하는 한인학생회가 되도록 노력하겠습니다.
+            </p>
+            <p>
+                한인학생회 임원진 올림
+            </p>
+            
+        </div>
+        <div class="arrow-down">
+            <a href="#gallerylist">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY>=580){
+                h1.classList.add('header_active');
+               
+            }
+            else{
+                h1.classList.remove('header_active');
+            }
+        })
+    </script>
+
+    <br><br><br><br>
+    <div class="gallerylist" id = "gallerylist">
+        <ul>
+            <li>
+                <a href="intro.html">
+                    <div class="screen">
+                        <div class="top">소개</div>
+                        <div class="bottom">한인회 소개, 회칙, 연락망 등을 볼 수 있습니다 </div>
+                        <img src="./images/ksaintro.jpeg">
+                    </div>
+                    <div>
+                        <h3>About Us</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="program.html">
+                    <div class="screen">
+                        <div class="top">한인회 활동</div>
+                        <div class="bottom">한인회에서 주최하는 프로그램 정보를 <br>볼 수 있습니다.</div>
+                        <img src="./images/ocamp-1.jpeg">
+                    </div>
+                    <div>
+                        <h3>KSA Activities</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="clubs.html">
+                    <div class="screen">
+                        <div class="top">동아리 활동</div>
+                        <div class="bottom">각 동아리 정보를 볼 수 있습니다.</div>
+                        <img src="./images/band-3.jpeg">
+                    </div>
+                    <div>
+                        <h3>KSA Clubs</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p><br><br><br>
+    <div class="gallerylist">
+        <ul>
+            <li>
+                <a href="covid.html">
+                    <div class="screen">
+                        <div class="top">코로나 19</div>
+                        <div class="bottom">입국 절차, 격리/검사시설 등 코로나19 관련 정보를 볼 수 있습니다.</div>
+                        <img src="./images/corona.jpeg">
+                    </div>
+                    <div>
+                        <h3>COVID-19</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="guidance.html">
+                    <div class="screen">
+                        <div class="top">정보 게시판</div>
+                        <div class="bottom">재정현황, 학교생활에 필요한 정보를 볼 수 있습니다.</div>
+                        <img src="./images/board.png">
+                    </div>
+                    <div>
+                        <h3>Information Board</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="sponsorship.html">
+                    <div class="screen">
+                        <div class="top">제휴 / 후원</div>
+                        <div class="bottom">한인회에서 제휴를 맺은 업체들을 볼 수 있습니다.</div>
+                        <img src="./images/sponsorship.jpeg">
+                    </div>
+                    <div>
+                        <h3>Sponsorships</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <br><br><br><br><br>
+    <div class="separate2">
+        <a href="https://www.facebook.com/groups/ksa.hkust"><i class="fa-brands fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/hkustsu.ksa/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:su.ksa@connect.ust.hk"><i class="fa-solid fa-envelope"></i></a>
+        <p class="copyright"><br/>
+            Copyright &copy <script>document.write( new Date().getFullYear() );</script>
+            KOREAN STUDENTS' ASSOCIATION
+            <div class="contributor">
+                Seunghyun Kang, Yoojin Jang, Hyeonseok Choi
+            </div>
+    </div>
+
+</body>
+</html>

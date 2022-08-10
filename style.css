@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(./images/mainpage.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width:100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow:auto;
+    background: rgba(0,0,0,0);
+
+}
+
+.header_active {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    overflow:auto;
+    background: rgba(0,0,0,0.9);
+    font-size: 40px;
+    padding: 25px 30px;
+    
+    
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+.header h1{
+    font-size: 40px;
+    
+    color: white;
+    padding: 25px 30px;
+}
+
+
+input[id="menuicon"]{
+    display:none;
+}
+input[id="menuicon"]+label{
+    display:block;
+    margin:30px;
+    width:30px;
+    height:25px;
+    position: fixed;
+    top:0;
+    right:0;
+    cursor: pointer;
+    z-index: 1000;
+}
+input[id="menuicon"]+label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 30px;
+    background: white;
+    transition: all .35s;
+}
+input[id="menuicon"]+ label span:nth-child(1){
+    top:0;
+}
+input[id="menuicon"]+ label span:nth-child(2){
+    top:50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"]+ label span:nth-child(3){
+    bottom:0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity:0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked + label + div{
+    right:0;
+}
+.sidebar img{
+    z-index: 2000;
+    width: 90px;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.menu{
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    padding-left: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu li{
+    padding-bottom: 40px;
+}
+.menu li a:hover{
+    opacity: 1;
+    color: rgb(97, 97, 97);
+}
+
+.contacts{
+    font-size: 30px;
+    position: fixed;
+    bottom:15%;
+    padding-left:7px;
+    color: white;
+}
+
+.contacts i{
+    padding-left:20px;
+}
+
+.contacts i:hover{
+    opacity: 1;
+    font-size: 30px;
+    color: rgb(97, 97, 97);
+}
+
+.welcome {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    line-height: 25px;
+    transform: translate(-50%, -45%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.welcome h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.welcome p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+}
+.arrow-down span{
+    display: block;
+    width: 1.3em;
+    height: 1.3em;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate-arrows 2s infinite;
+}
+
+@keyframes animate-arrows{
+    0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-1.5em, -1.5em);
+    }
+    50%{
+    opacity: 1;
+    }
+    100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(1.5em, 1.5em);
+    }
+}
+
+.arrow-down span:nth-child(1){
+    animation-delay: -0.2s;
+}
+.arrow-down span:nth-child(2){
+    animation-delay: -0.4s;
+}
+.arrow-down span:nth-child(3){
+    animation-delay: -0.6s;
+}
+  
+.separate{
+    width: 100%;
+    height: 10px;
+    background-color: #2b3a55;
+}
+
+.gallerylist{
+    max-width: 1200px;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+.gallerylist > ul{
+    font-size: 0;
+}
+.gallerylist > ul > li{
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
+}
+.gallerylist > ul > li > a{
+    display: block;
+    width: auto;
+    text-decoration: none;
+    margin: 5px;
+}
+.gallerylist > ul > li > a .screen{
+    position: relative;
+    overflow: hidden;
+}
+.gallerylist > ul > li > a .screen .top{
+    position: absolute;
+    bottom: 150%;
+    left: 20px;
+    z-index: 2;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    transition: all .35s;
+}
+.gallerylist > ul > li > a .screen .bottom{
+    position: absolute;
+    top: 150%;
+    left: 20px;
+    z-index: 2;
+    color: white;
+    font-size: 18px;
+    transition: all .35s;
+}
+.gallerylist > ul > li > a .screen img{
+    width: 100%;
+    height: 250px;
+}
+.gallerylist > ul > li > a h3{
+    font-size: 23px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px;
+    color: #666;
+}
+.gallerylist > ul > li > a .screen::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+    opacity: 0;
+    transition: all .35s;
+}
+.gallerylist > ul > li > a:hover .top{
+    bottom: 52%;
+}
+.gallerylist > ul > li > a:hover .bottom{
+    top: 52%;
+}
+.gallerylist > ul > li > a:hover .screen::after{
+    opacity: 1;
+}
+.separate2{
+    text-align: center;
+    width: 100%;
+    height: 110px;
+    bottom:0;
+    background-color:  rgba(0,0,0,0.9);
+    color:#fff;
+}
+.separate2 i{
+    padding-top: 15px;
+    text-align: center;
+    padding-right: 30px;
+    font-size: 35px;
+    color:#fff;
+}
+
+.separate2 i:hover{
+    padding-top: 15px;
+    text-align: center;
+    padding-right: 30px;
+    font-size: 35px;
+    color:rgb(97, 97, 97);
+}
+
+.contributor{
+    color: rgb(126, 126, 126);
+    text-align: right;
+    font-size: 10px;
+    padding-right: 5px;
+}

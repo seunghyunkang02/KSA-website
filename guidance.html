@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="./css/guidance.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css"
+    />
+    <script src="https://kit.fontawesome.com/b9ab0c7216.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>HKUST KSA</title>
+  </head>
+  <body>
+    <div class="header">
+
+      
+      <input type = "checkbox" id = "menuicon">
+    
+          <label for = "menuicon">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+     
+
+      
+      <div class="sidebar">
+          <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="intro.html">About Us</a></li>
+              <li><a href="activityclub.html">Activities/Clubs</a></li>
+              <li><a href="guidance.html">Information Board</a></li>
+              <li><a href="sponsorship.html">Sponsorships</a></li>
+          </ul>
+          <ul class="contacts">
+              <a href="https://www.facebook.com/groups/ksa.hkust"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="https://www.instagram.com/hkustsu.ksa/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:su.ksa@connect.ust.hk"><i class="fa-solid fa-envelope"></i></a>
+          </ul>
+      </div>
+      
+  </div>
+    <!-- club -->
+    <section class="club">
+      <div class="container">
+        <div class="section-header">
+          <h3>정보게시판</h3>
+          <p>
+            정보게시판은 한인회 회원들께 세밀하고 정확한 정보를 전달해드리기
+            위해<br />
+            행사, 재정, 방역 등 관련 주제별 분류와 재학생, 신입생, 복학생,
+            졸업생이라는 대상별 분류로 유형화되어 있습니다.<br />
+            세부적인 항목별 역할은 다음과 같으며 주기적으로 업데이트 하는 만큼
+            항상 가장 최근 정보를 보실 수 있게 노력하겠습니다.
+            <br />
+          </p>
+        </div>
+        <div class="section-content">
+          <h4>정보게시판</h4>
+          <ul>
+            <li>
+              <dl>
+                <dt><strong>안내</strong></dt>
+                <dd>
+                  <p>
+                    <strong><a href="finance.html"><u>재정현황</u></a></strong> <br />투명하고 올바른 운영을 위해
+                    한인회는 정기적으로 해당 기간 동안의 현금 흐름을 정리한
+                    재무제표를 작성해 과기대 학생연합 측에 보고하고 블로그에
+                    게시해 드립니다. <br /><br />
+                    <strong><a href="covid.html"><u>코로나 19</u></a></strong> <br />방역 관련 모든 정보를
+                    공지해드리는 곳으로 자가격리 절차, 마스크 구입처, 코로나
+                    검사 시설, 백신 프로그램 등 코로나19가 종식될 때 까지 필요할
+                    정보들을 업데이트 해드리고 있습니다. <br /><br />
+                    <strong><a href="university.html"><u>학교생활</u></a></strong> <br />신입생과 재학생을 위한
+                    페이지로, 수강신청에 대한 안내와 학부 별 전공신청, 전과절차
+                    및 세부사항을 정리해놨고 자취방, 의료보험, 이력서 등 재학 중
+                    필요할 정보들을 올려놓았습니다.
+                    <br />
+
+                    <br /><br />
+                  </p>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script>
+      // event list slider
+      var swiper = new Swiper(".images-list", {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1000,
+        spaceBetween: 0,
+        loop: true,
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 80,
+          depth: 280,
+          modifier: 1,
+          slideShadows: false,
+        },
+        navigation: {
+          nextEl: ".btn-slide-next",
+          prevEl: ".btn-slide-prev",
+        },
+        autoplay: {
+          delay: 4000,
+        },
+      });
+    </script>
+    <div class="separate2">
+      <a href="https://www.facebook.com/groups/ksa.hkust"><i class="fa-brands fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/hkustsu.ksa/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+      <a href="mailto:su.ksa@connect.ust.hk"><i class="fa-solid fa-envelope"></i></a>
+      <p class="copyright">
+          Copyright &copy <script>document.write( new Date().getFullYear() );</script>
+          KOREAN STUDENTS' ASSOCIATION
+          <div class="contributor">
+              Seunghyun Kang, Yoojin Jang, Hyeonseok Choi
+          </div>
+  </div>
+  </body>
+</html>
